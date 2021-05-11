@@ -18,72 +18,75 @@ root.title(" Scientific Calculator")
 
 switch = None
 
-# The functions will be executed once we click on a buttons
-# The following functions display the number once clicked
+''' The functions will be executed once we click on a buttons
+    The following functions display the number once clicked
+    The calculator also works if corresponding keys are pressed.
+'''
 
+# This function will insert 1 when button is clicked on calculator.
 def btn1_clicked():
     if disp.get() == '0':
         disp.delete(0, END)
     pos = len(disp.get())
     disp.insert(pos, '1')
 
-
+# This function will insert 2 when button is clicked on calculator.
 def btn2_clicked():
     if disp.get() == '0':
         disp.delete(0, END)
     pos = len(disp.get())
     disp.insert(pos, '2')
 
-
+# This function will insert 3 when button is clicked on calculator.
 def btn3_clicked():
     if disp.get() == '0':
         disp.delete(0, END)
     pos = len(disp.get())
     disp.insert(pos, '3')
 
-
+# This function will insert 4 when button is clicked on calculator.
 def btn4_clicked():
     if disp.get() == '0':
         disp.delete(0, END)
     pos = len(disp.get())
     disp.insert(pos, '4')
 
-
+# This function will insert 5 when button is clicked on calculator.
 def btn5_clicked():
     if disp.get() == '0':
         disp.delete(0, END)
     pos = len(disp.get())
     disp.insert(pos, '5')
 
-
+# This function will insert 6 when button is clicked on calculator.
 def btn6_clicked():
     if disp.get() == '0':
         disp.delete(0, END)
     pos = len(disp.get())
     disp.insert(pos, '6')
 
-
+# This function will insert 7 when button is clicked on calculator.
 def btn7_clicked():
     if disp.get() == '0':
         disp.delete(0, END)
     pos = len(disp.get())
     disp.insert(pos, '7')
 
-
+# This function will insert 8 when button is clicked on calculator.
 def btn8_clicked():
     if disp.get() == '0':
         disp.delete(0, END)
     pos = len(disp.get())
     disp.insert(pos, '8')
 
-
+# This function will insert 9 when button is clicked on calculator.
 def btn9_clicked():
     if disp.get() == '0':
         disp.delete(0, END)
     pos = len(disp.get())
     disp.insert(pos, '9')
 
-
+# This function will insert 0 when button is clicked on calculator.
 def btn0_clicked():
     if disp.get() == '0':
         disp.delete(0, END)
@@ -95,22 +98,22 @@ def key_event(*args):
     if disp.get() == '0':
         disp.delete(0, END)
 
-
+# This function will execute if + is clicked on calculator.
 def btnp_clicked():
     pos = len(disp.get())
     disp.insert(pos, '+')
 
-
+# This function will execute if - is clicked on calculator.
 def btnm_clicked():
     pos = len(disp.get())
     disp.insert(pos, '-')
 
-
+# This function will execute if * is clicked on calculator.
 def btnml_clicked():
     pos = len(disp.get())
     disp.insert(pos, '*')
 
-
+# This function will execute if / is clicked on calculator.
 def btnd_clicked():
     pos = len(disp.get())
     disp.insert(pos, '/')
@@ -124,8 +127,9 @@ def btnc_clicked(*args):
 Here when we use special mathematical functions we have to include exception handling.
 Also, for changing into radians and degrees corresponding conditional statements are used.
 '''
-
+# This function will execute if sin is clicked on calculator.
 def sin_clicked():
+    # The function returns the sin value if there is no exception.
     try:
         ans = float(disp.get())
         if switch is True:
@@ -137,8 +141,9 @@ def sin_clicked():
     except Exception:
         tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
+# This function will execute if cos is clicked on calculator.
 def cos_clicked():
+    # The function returns the cos value if there is no exception.
     try:
         ans = float(disp.get())
         if switch is True:
@@ -150,8 +155,9 @@ def cos_clicked():
     except Exception:
         tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
+# This function will execute if tan is clicked on calculator.
 def tan_clicked():
+    # The function returns the tan value if there is no exception.
     try:
         ans = float(disp.get())
         if switch is True:
@@ -163,8 +169,9 @@ def tan_clicked():
     except Exception:
         tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
+# This function will execute if sin^-1 is clicked on calculator.
 def arcsin_clicked():
+    # The function returns the sin^-1 value if there is no exception.
     try:
         ans = float(disp.get())
         if switch is True:
@@ -176,8 +183,9 @@ def arcsin_clicked():
     except Exception:
         tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
+# This function will execute if cos^-1 is clicked on calculator.
 def arccos_clicked():
+    # The function returns the cos^-1 value if there is no exception.
     try:
         ans = float(disp.get())
         if switch is True:
@@ -189,8 +197,9 @@ def arccos_clicked():
     except Exception:
         tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
+# This function will execute if tan^-1 is clicked on calculator.
 def arctan_clicked():
+    # The function returns the tan^-1 value if there is no exception.
     try:
         ans = float(disp.get())
         if switch is True:
@@ -202,12 +211,12 @@ def arctan_clicked():
     except Exception:
         tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
+# This function will execute if ** is clicked on calculator.
 def pow_clicked():
     pos = len(disp.get())
     disp.insert(pos, '**')
 
-
+# This function will execute if Round is clicked on calculator.
 def round_clicked():
     try:
         ans = float(disp.get())
@@ -217,7 +226,7 @@ def round_clicked():
     except Exception:
         tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
+# This function will execute if ln is clicked on calculator.
 def logarithm_clicked():
     try:
         ans = float(disp.get())
@@ -227,7 +236,7 @@ def logarithm_clicked():
     except Exception:
         tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
+# This function will execute if fact is clicked on calculator.
 def fact_clicked():
     try:
         ans = float(disp.get())
@@ -237,7 +246,7 @@ def fact_clicked():
     except Exception:
         tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
+# This function will execute if x^y is clicked on calculator.
 def sqr_clicked():
     try:
         ans = float(disp.get())
@@ -247,37 +256,38 @@ def sqr_clicked():
     except Exception:
         tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
+# This function will execute if . is clicked on calculator.
 def dot_clicked():
     pos = len(disp.get())
     disp.insert(pos, '.')
 
-
+# This function will execute if symbol of pi is clicked on calculator.
 def pi_clicked():
     if disp.get() == '0':
         disp.delete(0, END)
     pos = len(disp.get())
     disp.insert(pos, str(math.pi))
 
-
+# This function will execute if e is clicked on calculator.
 def e_clicked():
     if disp.get() == '0':
         disp.delete(0, END)
     pos = len(disp.get())
     disp.insert(pos, str(math.e))
 
-
+# This function will execute if (in is clicked on calculator.
 def bl_clicked():
     pos = len(disp.get())
     disp.insert(pos, '(')
 
-
+# This function will execute if ) is clicked on calculator.
 def br_clicked():
     pos = len(disp.get())
     disp.insert(pos, ')')
 
-
+# This function will execute if del is clicked on calculator.
 def del_clicked():
+    # This funciton will delete the displaying elements
     pos = len(disp.get())
     display = str(disp.get())
     if display == '':
@@ -290,8 +300,9 @@ def del_clicked():
         disp.delete(0, END)
         disp.insert(0, display[0:pos-1])
 
-
+# This function will execute if conv is clicked on calculator.
 def conv_clicked():
+    # This function helps to convert radians to degrees and vice versa
     global switch
     if switch is None:
         switch = True
@@ -300,7 +311,7 @@ def conv_clicked():
         switch = None
         conv_btn['text'] = "Rad"
 
-
+# This function will execute if ln is clicked on calculator.
 def ln_clicked():
     try:
         ans = float(disp.get())
@@ -310,12 +321,12 @@ def ln_clicked():
     except Exception:
         tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
+# This function will execute if mod is clicked on calculator.
 def mod_clicked():
     pos = len(disp.get())
     disp.insert(pos, '%')
 
-
+# This function will execute if equal to is clicked on calculator.
 def btneq_clicked(*args):
     try:
         ans = disp.get()
@@ -333,8 +344,11 @@ data = StringVar()
 
 # This the function which takes input from the user 
 # The default first entry box characteristics are specified  
+
 disp = Entry(root, font="Helvetica 24 bold italic", fg="#456268", bg="#fcf8ec", bd=2, justify=RIGHT, insertbackground="#fcf8ec", cursor="arrow")
+
 # The key events are specified, numeric as well as symbolic
+# bind is used as it allows the input from keys pressed on keyboard as well.
 disp.bind("<Return>", btneq_clicked)
 disp.bind("<Escape>", btnc_clicked)
 disp.bind("<Key-1>", key_event)
@@ -354,7 +368,11 @@ disp.focus_set()
 disp.pack(expand=TRUE, fill=BOTH)
 
 
-# The buttons are designed for the rows are the sizes are varied according to the font
+'''The buttons are designed for the rows are the sizes are varied according to the font
+# The font for all the buttons is Helvetica, font colour is white and the 
+# background colour is varied to give a impression of gradient.
+'''
+
 # Buttons in row 1
 
 btnrow1 = Frame(root, bg="#000000")
